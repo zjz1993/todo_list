@@ -1,0 +1,67 @@
+.container{
+  .todolist_app{
+    .app_holder{
+      animation-name: effect-fade-in;
+      animation-duration: 120ms;
+      max-width: 950px;
+      margin: 0 auto;
+      .left_menu{
+        background: linear-gradient(to left, #E9E4F0, #fafafa);
+        user-select: none !important;
+        float: left;
+        width: 265px;
+        padding-top: 50px;
+        position: fixed;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        border-right: 1px solid #f1f1f1;
+        background-color: #fafafa;
+        height:700px;
+        .list_holder{
+          width: 265px;
+          padding-bottom: 30px;
+          .top_filter{
+            margin: 0;
+            padding: 0;
+            padding-top: 24px;
+            a{
+              text-decoration: none;
+              color: #333333;
+              li{
+                min-height: 22px;
+                font-size: 14px;
+                color: #333;
+                list-style: none;
+                cursor: pointer;
+                padding: 9px 16px 9px 4px;
+                transition: color .1s ease-in,background-color .1s ease-in;
+                line-height: 1.25;
+                display: flex;
+                align-items: center;
+              }
+              .current{
+                background: #ffffff;
+                font-weight: bold;
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+      }
+      .content{
+        background-color: #fff;
+        padding: 0 20px;
+        margin-left: 284px;
+        border-right: 1px solid #f1f1f1;
+        min-height: 701px;
+        .editor{
+          vertical-align: top;
+          width: 640px;
+          padding: 6px 25px 12px 30px;
+          padding-top: 80px !important;
+          padding-bottom: 85px !important;
+        }
+      }
+    }
+  }
+}
