@@ -22,5 +22,14 @@
 
 同时，在前端的模块"已完成事项中"，可以查看到所有已经标记为完成的事件.   
 ![Markdown](./screen/allDoneTask.png). 
+### 5 编辑一个代办事项的具体内容
+![Markdown](./screen/editTask.gif)  
+针对任务的名称和日期进行修改  
+修改前  
 
+![Markdown](./screen/before.png). 
+
+修改后. 
+
+![Markdown](./screen/after.png). 
  
