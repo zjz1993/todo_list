@@ -42,7 +42,7 @@ module.exports = {
     // of CSS changes), or refresh the page (in case of JS changes). When you
     // make a syntax error, this client will display a syntax error overlay.
     // Note: instead of the default WebpackDevServer client, we use a custom one
-    // to bring better experience for Create React App users. You can replace
+    // to bring better experience for Create React Index users. You can replace
     // the line below with these two lines if you prefer the stock client:
     // require.resolve('webpack-dev-server/client') + '?/',
     // require.resolve('webpack/hot/dev-server'),
@@ -200,6 +200,10 @@ module.exports = {
                 },
               },
             ],
+          },
+          {
+            test: /\.less$/,
+            loader: 'style-loader!css-loader!less-loader'
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
