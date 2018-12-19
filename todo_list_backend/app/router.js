@@ -7,5 +7,5 @@ module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
   router.resources('users', '/users', controller.user);
-  router.post('/login', controller.login.index);
+  router.post('/api/login', controller.login.index);
 };

@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "",
-    "database": "egg-sequelize-example-dev",
+    "database": "todo_list",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

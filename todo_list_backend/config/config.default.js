@@ -7,7 +7,10 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1543905594319_7251';
 
   // add your config here
-  config.middleware = [];
+  config.middleware=['errorHandler'],
+  config.middleware.errorHandler= {
+    match: '/api',
+  },
   
   config.security = {
     csrf: {
@@ -16,11 +19,12 @@ module.exports = appInfo => {
     },
     domainWhiteList: ['*']
   };
+  // config.middleware = ['notFoundHandler'];
   config.sequelize = {
     dialect: 'mysql',
     host: '127.0.0.1',
     port: 3306,
-    database: 'egg-sequelize-example-dev',
+    database: 'todo_list',
   };
   
   config.cors = {
