@@ -7,17 +7,19 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1543905594319_7251';
 
   // add your config here
-  config.middleware=['errorHandler'],
-  config.middleware.errorHandler= {
+  config.middleware = [ 'errorHandler', 'notfoundHandler', 'isLoginHandler' ],
+  config.middleware.notfoundHandler;
+  config.middleware.isLogin;
+  config.middleware.errorHandler = {
     match: '/api',
   },
-  
+
   config.security = {
     csrf: {
       enable: false,
-      ignoreJSON: true
+      ignoreJSON: true,
     },
-    domainWhiteList: ['*']
+    domainWhiteList: [ '*' ],
   };
   // config.middleware = ['notFoundHandler'];
   config.sequelize = {
@@ -26,10 +28,10 @@ module.exports = appInfo => {
     port: 3306,
     database: 'todo_list',
   };
-  
+
   config.cors = {
-    origin:'*',
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };
 
   return config;
