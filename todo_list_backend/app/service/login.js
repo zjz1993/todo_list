@@ -23,11 +23,13 @@ class LoginService extends Service {
       const checkedPassword = data[0].get('password');
       if (checkedPassword === password) {
         const token = jwt.sign({
-          username,
-          password
-        }, 'salt', {
-          expiresIn:  '1h' //秒到期时间
-        });
+          data: {
+            username,
+            password
+          },
+          exp: Math.floor(Date.now() / 1000) + (60 * 60),
+          // iat: Math.floor(Date.now() / 1000 - 60*60)
+        }, 'zjz1993');
         return {
           success: true,
           status: 200,
